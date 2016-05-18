@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({url: "http://words.bighugelabs.com/api/2/447196cf3245279aa175021293bc374c/happy/json",
+
+                    success: function(result){
+
+                    var syms=[];
+                    syms=JSON.parse(result).adjective.syn;
+                    console.log('syms: '+syms);
+                    for(var i=0;i<syms.length;i++){
+                        $("#sym").append("<li>"+syms[i]+"</li>");
+                       }
+                },
+                error:{
+
+                }});
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<ul id="sym"></ul>
+<button>Get External Content</button>
+</body>
+</html>
