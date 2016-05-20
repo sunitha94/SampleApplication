@@ -14,6 +14,6 @@
 <body>
 <input type="text">
 <h1>Welcome to Spring Boot</h1>
-<h2>${employee}</h2>
+<h2><a href="/employees">Get Employees</a></h2>
 </body>
 </html>
