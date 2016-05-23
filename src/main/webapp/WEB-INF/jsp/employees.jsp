@@ -31,7 +31,7 @@
         <td>${employee.name}</td>
         <td>${employee.email}</td>
         <td>${employee.gender}</td>
-        <td><a id="${employee.id}">Edit</a> &nbsp;<a id="${employee.id}">Delete</a></td>
+        <td><a href="\${employee.id}">Edit</a> &nbsp;<a id="${employee.id}">Delete</a></td>
     </tr>
 </c:forEach>
     </table>
